@@ -123,7 +123,7 @@ func (sdc *ShutdownConfig) GetTimeout() time.Duration {
 	return result
 }
 
-// APIMetaConfig how to find api config, file or etcd etc.
+// APIMetaConfig how to find api config, file or etcdv3 etc.
 type APIMetaConfig struct {
 	Address       string `yaml:"address" json:"address,omitempty"`
 	APIConfigPath string `default:"/pixiu/config/api" yaml:"api_config_path" json:"api_config_path,omitempty" mapstructure:"api_config_path"`

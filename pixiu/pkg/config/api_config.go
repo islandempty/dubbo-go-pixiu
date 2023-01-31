@@ -89,7 +89,7 @@ func LoadAPIConfig(metaConfig *model.APIMetaConfig) (*fc.APIConfig, error) {
 		etcdv3.WithEndpoints(strings.Split(metaConfig.Address, ",")...),
 	)
 	if err != nil {
-		return nil, perrors.Errorf("Init etcd client fail error %s", err)
+		return nil, perrors.Errorf("Init etcdv3 client fail error %s", err)
 	}
 
 	client = tmpClient
@@ -260,7 +260,7 @@ func listenResourceAndMethodEvent(key string) bool {
 			logger.Warnf("client stopped")
 			return false
 		// client ctx stop
-		// handle etcd events
+		// handle etcdv3 events
 		case e, ok := <-wc:
 			if !ok {
 				logger.Warnf("watch-chan closed")

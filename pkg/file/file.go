@@ -98,7 +98,7 @@ const (
 
 // IsDirWriteable checks if dir is writable by writing and removing a file
 // to dir. It returns nil if dir is writable.
-// Inspired by etcd fileutil.
+// Inspired by etcdv3 fileutil.
 func IsDirWriteable(dir string) error {
 	f := filepath.Join(dir, ".touch")
 	if err := os.WriteFile(f, []byte(""), PrivateFileMode); err != nil {

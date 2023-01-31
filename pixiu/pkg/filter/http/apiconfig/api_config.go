@@ -140,7 +140,7 @@ func initApiConfig(cf *ApiConfigConfig) (*fc.APIConfig, error) {
 	if cf.APIMetaConfig != nil {
 		a, err := config.LoadAPIConfig(cf.APIMetaConfig)
 		if err != nil {
-			logger.Warnf("load api config from etcd error:%+v", err)
+			logger.Warnf("load api config from etcdv3 error:%+v", err)
 			return nil, err
 		}
 		return a, nil

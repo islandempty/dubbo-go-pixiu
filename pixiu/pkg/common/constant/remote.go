@@ -22,4 +22,5 @@ const (
 	Zookeeper string = "zookeeper"
 	Nacos     string = "nacos"
 	Consul    string = "consul"
+	EtcdV3    string = "etcdv3"
 )
